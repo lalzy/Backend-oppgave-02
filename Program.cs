@@ -1,9 +1,4 @@
-﻿﻿/*
-Her skal dere designe et program som skal returnere en bedskjed tilbake til en bruker basert på noen valgfrie parametere.
-Dere kan selv bestemme hvilke parametere som skal bestemme hva hilsen kommer tilbake, men her kommer noen tips:
-*/
-
-
+﻿﻿
 /*Psudo Code:
 
 Funskjon - melding (dagen å sjekke):
@@ -18,9 +13,13 @@ Funskjon - melding (dagen å sjekke):
     søndag - siste dag av uka, på tide å `(cons ,@weekdays)
 */
 
+using System.ComponentModel.DataAnnotations.Schema;
 
-void dagsMelding (){
-    var idag = DateTime.Now;
-    Console.WriteLine(idag);
-}
-dagsMelding();
+Console.WriteLine("--------------------------------------------------");
+Console.WriteLine("Test:");
+DagensMelding.dagsMeldingTest(); // kjører test funksjonen som viser alle meldingene.
+
+Console.WriteLine("--------------------------------------------------");
+Console.WriteLine("Dagens Melding:");
+DagensMelding.DagsMelding();
+Console.WriteLine("--------------------------------------------------");
